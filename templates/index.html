@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Scorecard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.cdnfonts.com/css/berenika-2" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <h1>Cricket Match Calculator</h1>
+    <div id="calculator-container">
+        <div class="input-result-container">
+            <div class="input-group">
+                <form class="input-form">
+
+                <label>Target:</label>
+                <input type="number" id="target" class="input-line" min="1" value="0">
+                <span id="target_error" class="error-msg"></span>
+                
+                <label>Current Score:</label>
+                <input type="number" id="current_score" class="input-line" min="0" value="0">
+                <span id="current_score_error" class="error-msg"></span>
+                
+                <label>Wickets Lost:</label>
+                <input type="number" id="wickets" class="input-line" min="0" max="10" value="0">
+                <span id="wickets_error" class="error-msg"></span>
+                
+                <label>Total Overs:</label>
+                <input type="number" id="total_overs" class="input-line" min="0" step="0.1" value="0">
+                <span id="total_overs_error" class="error-msg"></span>
+                
+                <label>Current Over (e.g., 5.2):</label>
+                <input type="number" id="current_over" class="input-line" min="0"  step="0.1" value="0">
+                <span id="current_over_error" class="error-msg"></span>
+
+                </form>
+            </div>
+           
+
+            <div id="display-results">
+                <div id="match-status">    
+                    <h3>Match Status: <span id="status_msg">Waiting for input...</span></h3>
+                </div>    
+                <div id="current-rr">    
+                    <p>Current Run Rate: <span id="crr_val">0.00</span></p>
+                </div>    
+                <div id="required-rr">    
+                    <p>Required Run Rate: <span id="rrr_val">0.00</span></p>
+                </div>    
+            </div>
+        </div>
+
+        <div id="calc-button"> 
+            <button id="calc-btn" type="button">Calculate Now</button>
+        </div>    
+    </div>
+    <footer style="
+        text-align: center;
+        padding: 15px 0;
+        background: #111;
+        color: #bbb;
+        font-size: 14px;
+        margin-top: 40px;
+    ">
+    <p>Built with passion & curiosity — My first full-stack app is finally alive! 🚀</p>
+    <p>Crafted by <strong>Nilakesh Barman</strong> · 
+        <a href="https://github.com/CodeCrusher123" target="_blank" style="color:#4da3ff;">
+            @CodeCrusher123s
+        </a>
+    </p>
+    <p style="opacity: .6;">© 2026 All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
